@@ -1,4 +1,24 @@
-        <h2 id="about">About</h2>
+<html>
+        <head>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script> 
+$(document).ready(function(){
+  $("#header").load("header.html"); 
+  $("#footer").load("footer.html"); 
+});
+</script> 
+        </head>
+        <body>
+                
+                <!-- Page header -->
+  <div id="header"></div>
+    <!-- End page header -->
+                
+     <!-- Page content -->      
+<h2 id="about">About</h2>
 
         <!-- Profile box -->
         <!-- https://bulma.io/documentation/layout/media-object/ -->
@@ -40,3 +60,10 @@
           </div>
         </article>
         <!-- End profile box -->
+                <!-- End Page content -->  
+                
+                    <!-- Page footer -->
+ <div id="footer"></div>
+  <!-- End page footer -->
+                </body>
+        </html>
