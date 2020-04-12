@@ -1,32 +1,53 @@
-  <h2 id="visualizations">Visualizations</h2>
+<html>
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script> 
+$(document).ready(function(){
+  $("#header").load("header.html"); 
+  $("#footer").load("footer.html"); 
+});
+</script> 
+    </head>
+  <body>
+    
+    <!-- Page header -->
+  <div id="header"></div>
+    <!-- End page header -->
+    
+    <!-- Page content -->
+    
+<h2 id="visualizations">Visualizations</h2>
 
         <p>Ideally not everything would be on a single page like this example. Instead, you might want to put each section in its own webpage. You would need to carefully replicate the page template (with the header, navbar, and footer) and make the necessary updates. For example, you want the "About" navbar item to be considered active on an "About" web page.</p>
 
         <p>For now this is just a demo. The buttons below do not go anywhere, but can be easily changed to link to different visualization pages.</p>
 
         <p class="buttons">
-          <a class="button is-large is-success" href="#">
+          <a class="button is-large is-success" href="#" id="linechart">
             <span class="icon is-medium">
               <i class="fas fa-chart-line"></i>
             </span>
             <span>Line Chart</span>
           </a>
 
-          <a class="button is-large is-primary" href="#">
+          <a class="button is-large is-primary" href="#" id="areachart">
             <span class="icon is-medium">
               <i class="fas fa-chart-area"></i>
             </span>
             <span>Area Chart</span>
           </a>
 
-          <a class="button is-large is-info" href="#">
+          <a class="button is-large is-info" href="#" id="barchart">
             <span class="icon is-medium">
               <i class="fas fa-chart-bar"></i>
             </span>
             <span>Bar Chart</span>
           </a>
 
-          <a class="button is-large is-link" href="#">
+          <a class="button is-large is-link" href="#" id="piechart">
             <span class="icon is-medium">
               <i class="fas fa-chart-pie"></i>
             </span>
@@ -68,3 +89,11 @@
         <p class="is-6">
           <em>Thanks to Person Name for their suggestion to do something with the visualization.</em>
         </p>
+    
+    <!--End Page content -->
+    
+        <!-- Page footer -->
+ <div id="footer"></div>
+  <!-- End page footer -->
+  </body>
+  </html>
