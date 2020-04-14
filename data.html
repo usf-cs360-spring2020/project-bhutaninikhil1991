@@ -4,42 +4,75 @@
     <div class="content">
       <h2 id="data">Data</h2>
 
-      <p>Include some detailed information about the dataset here. You should <a href="#">add a link</a> to the original dataset. You might also want to quote the license:</p>
+      <p>The dataset includes police incident reports filed by officers and by individuals through self-service online reporting for non-emergency cases. Reports included are those for incidents that occurred starting January 1, 2018 onward and have
+        been approved by a supervising officer.</p>
 
+      <p>The original dataset includes over 337K rows as of April 13, 2020. The original dataset includes 26 columns and each row is a incident record. The direct link to data set is: <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783" target="_blank">https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783</a>.
+        The full citation is :</p>
       <blockquote>
         <p>
-          "This data is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: <a href="http://www.opendatacommons.org/licenses/pddl/1.0/">www.opendatacommons.org/licenses/pddl/1.0/</a>"
+          "This data is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: <a href="http://www.opendatacommons.org/licenses/pddl/1.0/" target="_blank">www.opendatacommons.org/licenses/pddl/1.0/</a>"
         </p>
-        <cite>Put a citation here, possibly link to the dataset license information directly.</cite>
+        <cite>Data acquired from <a href="https://datasf.org/opendata/" target="_blank">https://datasf.org/opendata/</a> on April 13 2020. Aggregated data on this page is made freely available under Open Data Commons Public Domain Dedication and License(<a href="https://opendatacommons.org/licenses/pddl/1.0/" target="_blank">https://opendatacommons.org/licenses/pddl/1.0/</a>).</cite>
       </blockquote>
 
       <p>In addition to including a link to the source and license, you should describe the data. You might want a list of some sort to enumerate the different types of columns:</p>
 
       <ol>
-        <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
+        <li><strong>Incident Datetime:</strong> The date and time when the incident occurred. The data type is date and time.</li>
 
-        <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
+        <li><strong>Incident Date:</strong> The date the incident occurred. The data type is date and time.</li>
 
-        <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
+        <li><strong>Incident Time:</strong> The time the incident occurred. The data type is plain text.</li>
 
-        <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
+        <li><strong>Incident Year:</strong> The year the incident occurred, provided as a convenience for filtering. The data type is plain text.</li>
+
+        <li><strong>Incident Day of Week:</strong> The day of week the incident occurred. The data type is plain text.</li>
+
+        <li><strong>Report Datetime:</strong> Distinct from Incident Datetime, Report Datetime is when the report was filed. The data type is date and time.</li>
+
+        <li><strong>Row ID:</strong> An identifier unique to the dataset. The data type is plain text.</li>
+
+        <li><strong>Incident ID:</strong> This is the system generated identifier for incident reports. An incident report can have multiple incident codes associated. Thus, this identifier, while unique to the report, will be duplicated within this dataset to represent those 1 to many relationships when they exist. Incident IDs and Incident Numbers both uniquely identify reports, but Incident Numbers are what are used and referenced in the cases and report documents. The data type is plain text.</li>
+
+        <li><strong>Incident Number:</strong> The number issued on the report, sometimes interchangeably referred to as the Case Number. The data type is plain text.</li>
+
+        <li><strong>CAD Number:</strong> The Computer Aided Dispatch is the system used by the Department of Emergency Management (DEM) to dispatch officers and other public safety personnel. CAD Numbers are assigned by the DEM system and linked to relevant incident reports (Incident Number). Not all Incidents will have a CAD Number. Reports filed online via Coplogic ( see field: Filed Online) will not have a CAD Number and certain other reports not filed through the DEM system will also not have these numbers. The data type is plain text.</li>
+
+        <li><strong>Report Type Code:</strong> A system code for report types, these have corresponding descriptions within the dataset. The data type is plain text.</li>
+
+        <li><strong>Report Type Description:</strong> The description of the report type, can be one of: Initial; Initial Supplement; Vehicle Initial; Vehicle Supplement; Coplogic Initial; Coplogic Supplement. The data type is plain text.</li>
+
+        <li><strong>Filed Online:</strong> Police reports can be filed online for non-emergency cases. These reports are entered via a self-service system called Coplogic (http://sanfranciscopolice.org/reports). This field is a boolean indicating the record was filed this way. These are also indicated in the Report Type Code and Report Type Description fields. The data type is checkbox.</li>
+
+        <li><strong>Incident Code:</strong> Incident Codes are the system codes to describe a type of incident. A single incident report can have one or many incident types associated. In those cases you will see multiple rows representing a unique combination of the Incident ID and Incident Code. The data type is plain text.</li>
+
+        <li><strong>Incident Category:</strong> A category mapped on to the Incident Code used in statistics and reporting. Mappings provided by the Crime Analysis Unit of the Police Department. The data type is plain text.</li>
+
+        <li><strong>Incident Subcategory:</strong> A subcategory mapped on to the Incident Code used in statistics and reporting. These nest inside the Category field. Mappings provided by the Crime Analysis Unit of the Police Department. The data type is plain text.</li>
+
+        <li><strong>Incident Description:</strong> The description of the incident that corresponds with the Incident Code. These are generally self-explanatory. The data type is plain text.</li>
+
+        <li><strong>Resolution:</strong> The resolution of the incident at the time of the report. Can be one of: - Cite or Arrest Adult - Cite or Arrest Juvenile - Exceptional Adult - Exceptional Juvenile - Open or Active - Unfounded Note: once a report is filed the resolution does not change on the filed report later. Updates to a case will be issued later as Supplemental reports if there's a status change. The data type is plain text.</li>
+
+        <li><strong>Intersection:</strong> The 2 or more street names that intersect closest to the original incident separated by a forward slash (\). Note, the possible intersections will only include those that satisfy the privacy controls. The data type is plain text.</li>
+
+        <li><strong>CNN:</strong> The unique identifier of the intersection for reference back to other related basemap datasets. For more on the Centerline Node Network see < a href="https://datasf.gitbooks.io/draft-publishing-standards/content/basemap/street-centerlines-nodes.html" target="_blank">https://datasf.gitbooks.io/draft-publishing-standards/content/basemap/street-centerlines-nodes.html</a>.The data type is plain text.</li>
+
+        <li><strong>Police District:</strong> The Police District reflecting current boundaries (boundaries changed in 2015). Reference here: <a href="https://data.sfgov.org/d/wkhw-cjsf" target="_blank">https://data.sfgov.org/d/wkhw-cjsf</a> Please note these are entered by officers and not based on the point. The data type is plain text.</li>
+
+        <li><strong>Analysis Neighborhood:</strong> The Department of Public Health and the Mayor's Office of Housing and Community Development, with support from the Planning Department, created 41 neighborhoods by grouping 2010 Census tracts, using common real estate and resident definitions for the purpose of providing consistency in the analysis and reporting of socio-economic, demographic, and environmental data, and data on City-funded programs and services. They are not codified in Planning Code nor Administrative Code. This boundary is produced by assigning Census tracts to neighborhoods based on existing neighborhood definitions used by Planning and MOHCD. A qualitative assessment was made to identify the appropriate neighborhood for a given tract based on understanding of population distribution and significant landmarks. Once all tracts have been assigned a neighborhood, the tracts were dissolved to produce these boundaries. See reference: <a href="https://data.sfgov.org/d/p5b7-5n3h" target="_blank">https://data.sfgov.org/d/p5b7-5n3h</a> Please note this boundary is assigned based on the intersection, it may differ from the boundary the incident actually occurred within. The data type is plain text.</li>
+
+        <li><strong>Supervisor District:</strong> There are 11 members elected to the Board of Supervisors in San Francisco, each representing a geographic district. The Board of Supervisors is the legislative body for San Francisco. The districts are numbered 1 through 11. See reference: <a href="https://data.sfgov.org/d/8nkz-x4ny" target="_blank">https://data.sfgov.org/d/8nkz-x4ny</a> Please note this boundary is assigned based on the intersection, it may differ from the boundary the incident actually occurred within. The data type is plain text.</li>
+
+        <li><strong>Latitude:</strong> The latitude coordinate in WGS84, spatial reference is EPSG:4326. Note, will be blank where geocoding was not possible. The data type is number.</li>
+
+        <li><strong>Longitude:</strong> The longitude coordinate in WGS84, spatial reference is EPSG:4326. Note, will be blank where geocoding was not possible. The data type is number.</li>
+
+        <li><strong>point:</strong> The point geometry used for mapping features in the open data portal platform. Latitude and Longitude are provided separately as well as a convenience. Note, will be blank where geocoding was not possible. The data type is location.</li>
       </ol>
 
-      <p>This will of course differ depending on the assignment and data.</p>
-
-      <h3 id="wrangling">Wrangling</h3>
-
-      <p>Perhaps you had to do some data wrangling to the original dataset to prepare it for visualization. This would be a great place to discuss some of that wrangling.
-
-        <pre>
-You can even put code into these pre blocks.
-  It will preserve whitespace.
-    That is helpful for formatted code.
-        </pre>
-
-        <p>You can alternatively embed a Gist if you want. There is an "embed" button on <a href="https://gist.github.com/octocat/6cad326836d38bd3a7ae">the Gist page</a> and results in something like this:</p>
-
-        <script src="https://gist.github.com/octocat/6cad326836d38bd3a7ae.js"></script>
+      <p>In case of any additional questions, view the FAQ (<a href="https://support.datasf.org/help/police-department-incident-reports-2018-to-present-overview" target="_blank">https://support.datasf.org/help/police-department-incident-reports-2018-to-present-overview</a>)</p>
 
     </div>
     <!-- End page content -->

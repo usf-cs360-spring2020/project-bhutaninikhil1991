@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
   <!-- TODO: Change title -->
-  <title>Website Template</title>
+  <title>Final Project</title>
 
   <!-- Load Bulma from CDN (consider saving it to repository instead) -->
   <!-- https://bulma.io/ -->
@@ -32,9 +33,9 @@
       }
     });
 
-    $(document).on("click", function(event) {
-      $(".dropdown-menu").hide();
-    });
+    // $(document).on("click", function(event) {
+    //   $(".dropdown-menu").hide();
+    // });
 
 
     $(document).ready(function() {
@@ -53,10 +54,6 @@
         $("#body").load("about.html");
       });
 
-      $("#grade").click(function() {
-        $("#body").load("grade.html");
-      });
-
       $("#visualization").click(function() {
         $("#body").load("visualization.html");
       });
@@ -68,10 +65,10 @@
         $(this).addClass("is-active");
       });
 
-      $('.dropdown').click(function(event) {
-        event.stopPropagation();
-        $(".dropdown-menu").slideToggle("fast");
-      });
+      // $('.dropdown').click(function(event) {
+      //   event.stopPropagation();
+      //   $(".dropdown-menu").slideToggle("fast");
+      // });
 
     });
   </script>
@@ -83,12 +80,13 @@
     <!-- Page header -->
     <!-- https://bulma.io/documentation/layout/hero/ -->
     <section class="hero is-primary is-bold">
-      <div class="hero-body">
+      <div class="hero-body" style="background-image: url('Images/sfpd.jpg');background-repeat: no-repeat;background-position: right;">
         <div class="container">
           <!-- TODO: Change title -->
-          <h1 class="title">Website Title</h1>
-          <!-- TODO: Change subtitle -->
-          <h2 class="subtitle">Website Subtitle</h2>
+          <div class="header">
+            <img src="Images/SFPDlogo.jpeg" alt="logo" />
+            <h1 class="title">Police Department Incident Reports</h1>
+          </div>
         </div>
       </div>
     </section>
@@ -121,8 +119,12 @@
               <span>Data</span>
             </a>
 
+            <a class="navbar-item" href="#" title="Visualization" id="visualization">
+              <span>Visualization</span>
+            </a>
+
             <!-- TODO: Modify or remove dropdown -->
-            <div class="navbar-item has-dropdown is-hoverable">
+            <!-- <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link dropdown" href="#" id="visualization">
                 Visualizations
               </a>
@@ -148,17 +150,11 @@
                   <span>Pie Chart</span>
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <!-- Right navbar items -->
           <div class="navbar-end">
-            <!-- TODO: Update as needed -->
-            <a class="navbar-item" href="#" title="Grade" id="grade">
-              <span class="icon"><i class="fas fa-tasks"></i></span>
-              <span>Grade</span>
-            </a>
-
             <a class="navbar-item" href="#" title="About" id="about">
               <span class="icon"><i class="fas fa-info-circle"></i></span>
               <span>About</span>

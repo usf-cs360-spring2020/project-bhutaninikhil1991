@@ -1,0 +1,16 @@
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 30px;
+  left: 10px;
+}
+
+.hero-body{
+  background-color: #0a1433;
+}
