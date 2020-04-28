@@ -33,9 +33,9 @@
       }
     });
 
-    // $(document).on("click", function(event) {
-    //   $(".dropdown-menu").hide();
-    // });
+    $(document).on("click", function(event) {
+      $(".dropdown-menu").hide();
+    });
 
 
     $(document).ready(function() {
@@ -54,8 +54,12 @@
         $("#body").load("about.html");
       });
 
-      $("#visualization").click(function() {
-        $("#body").load("visualization.html");
+      $("#visualization, #alpharelease").click(function() {
+        $("#body").load("alpharelease.html");
+      });
+
+      $("#betarelease").click(function() {
+        $("#body").load("betarelease.html");
       });
 
       $('.navbar-item').click(function() {
@@ -65,10 +69,10 @@
         $(this).addClass("is-active");
       });
 
-      // $('.dropdown').click(function(event) {
-      //   event.stopPropagation();
-      //   $(".dropdown-menu").slideToggle("fast");
-      // });
+      $('.dropdown').click(function(event) {
+        event.stopPropagation();
+        $(".dropdown-menu").slideToggle("fast");
+      });
 
     });
   </script>
@@ -119,27 +123,27 @@
               <span>Data</span>
             </a>
 
-            <a class="navbar-item" href="#" title="Visualization" id="visualization">
+            <!-- <a class="navbar-item" href="#" title="Visualization" id="visualization">
               <span>Visualization</span>
-            </a>
+            </a> -->
 
             <!-- TODO: Modify or remove dropdown -->
-            <!-- <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link dropdown" href="#" id="visualization">
                 Visualizations
               </a>
 
               <div class="navbar-dropdown dropdown-menu">
-                <a class="navbar-item" href="#" id="linechart">
+                <a class="navbar-item" href="#" id="alpharelease">
                   <span class="icon"><i class="fas fa-chart-line"></i></span>
-                  <span>Line Chart</span>
+                  <span>Alpha Release</span>
                 </a>
-                <a class="navbar-item" href="#" id="areachart">
+                <a class="navbar-item" href="#" id="betarelease">
                   <span class="icon"><i class="fas fa-chart-area"></i></span>
-                  <span>Area Chart</span>
+                  <span>Beta Releases</span>
                 </a>
 
-                <hr class="navbar-divider">
+                <!-- <hr class="navbar-divider">
 
                 <a class="navbar-item" href="#" id="barchart">
                   <span class="icon"><i class="fas fa-chart-bar"></i></span>
@@ -148,9 +152,9 @@
                 <a class="navbar-item" href="#" id="piechart">
                   <span class="icon"><i class="fas fa-chart-pie"></i></span>
                   <span>Pie Chart</span>
-                </a>
+                </a> -->
               </div>
-            </div> -->
+            </div>
           </div>
 
           <!-- Right navbar items -->
