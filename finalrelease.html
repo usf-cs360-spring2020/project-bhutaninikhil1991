@@ -45,37 +45,67 @@
             </p>
           </div>
         </div>
-        <!-- <div class="split left">
-          <div class="centered">
-            <div id="div_heatmap">
-              <h3 style="font-weight: normal">Day/Hour Missing Person Incident Report</h3>
-              <svg id="heatmap"></svg>
-            </div>
-            <div id="div_barchart">
-              <h3 style="font-weight: normal">Monthly Missing Person Incident Report</h3>
-              <svg id="barchart"></svg>
-            </div>
-          </div>
-        </div>
 
-        <div class="split right">
-          <div class="centered">
-            <div id="slider"></div>
-            <h3 style="font-weight: normal">Police District wise distribution of Missing Person Incident Report</h3>
-            <div id="div_map">
-              <svg id="map">
-                <g id="basemap"></g>
-                <g id="outline" pointer-events="none"></g>
-                <g id="cases"></g>
-                <g id="tooltip" pointer-events="none"></g>
-                <g id="details" pointer-events="none"></g>
-              </svg>
-              <p>Nikhil Bhutani</p>
-              Source: <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783/data" target="_blank">Police Department Incident Reports</a> (<a
-                href="https://data.sfgov.org/Public-Safety/Current-Police-Districts/wkhw-cjsf" target="_blank">Police District</a>)
-            </div>
-          </div>
-        </div> -->
+        <h4>Interactivity for the Visualization</h4>
+        <p>Following interactivities has been implemented for the visualization:</p>
+        <ul>
+          <li>On demand data display i.e. when a user hovers over barchart, heatmap or choropleth map then a tool tip pops up with specific details about the data.</li>
+          <li>The choropleth map has the ability of zooming and panning. It can be zoomed using scroll button and panning can be achieved by dragging the map anywhere within the map svg.</li>
+          <li>The year slider gives the flexibility of filtering the data from year 2015 till 2019.</li>
+          <li>Clicking on the police district simultaneoously in the choropleth map gives the further flexibility of filtering the data accordingly.</li>
+        </ul>
+
+        <h4>Peer Review Feedback</h4>
+        <ul>
+          <li>Encoding the raw incident count on the choropleth map should be avoided. Context is not enough for phototype.</li>
+          <li>Choropleths always have a bit of a lie factor because of the area. The color scale is alright but there are big chunks of areas with the same color.</li>
+          <li>I think making Call Type displayed by circle size is a little confusing. Also Station numbers kind of lack information/content like location.</li>
+          <li>data density and data-ink ratio is also very good.</li>
+          <li>You Can connect two phototype which using same filte.</li>
+          <li>Appropriate gradient color scheme used for encoding number of incidents.</li>
+        </ul>
+
+        <h4> Changes I Made</h4>
+        <ul>
+          <li>Changed the basemap of the choropleth map from "SF neighborhood" to "Police district" because of missing data for many neighborhoods within the report.</li>
+          <li>Encoded the choropleth map as percentage of missing person incidents accross police district instead of represting it as raw count.</li>
+          <li>linked interactivities across prototypes as suggested in one of the comments.</li>
+        </ul>
+
+        <h4> Data Encoding and Interpretation</h4>
+        <h5>Choropleth Map</h5>
+        <p>Choropleth Maps displays san francisco police districts that are coloured, shaded or patterned in relation to a precentage of incident count across police districts. This provides a way to visualise values over a geographical area, which
+          can show variation or patterns across the displayed location.Choropleth maps are great to show clear regional pattern in the data, or for local data.The general hierarchy of color shades varies from the darkest (highest values) through the
+          mid range shades and to the light shades (lowest values).</p>
+        <h5>Bar Chart</h5>
+        <p>The Y axis corresponds to missing person incident count(numbers) whereas X axis corresponds to months in a year i.e January till December. The Incident number is encoded by the length of the bar, so longer bars
+          represent higher missing person incident count.</p>
+        <h5>Heatmap</h5>
+        <p>A heat map uses a matrix layout with colour and shading to show the relationship between two categories of values. The values are presented along each axis and the corresponding cell is then colour-coded to represent the relationship
+          between the two categories. This heatmap shows the days i.e. Monday to Sunday (y axis) on a 24 hour clock i.e. 12AM(00 hrs.) to 11PM(23 hrs.) (x axis). The darker cells would indicate there are more number of missing person incidents
+          .The general hierarchy of color shades varies from the darkest (highest values) through the mid range shades and to the light shades (lowest values).</p>
+
+        <h4>Conclusion based on the prototype</h4>
+        <ul>
+          <li>In general as compared to year 2015, year 2019 has less number of missing person incidents reported over all.</li>
+          <li>on an average more number of person goes missing around 12PM in afternoon and mostly on weekdays as compared to weekends.</li>
+          <li>on an average more number of person goes missing during a summer months i.e. april to august.</li>
+          <li>southern police district mostly records high number of missing person incidents across 5years span.</li>
+        </ul>
+        <h4>How this visualization supports the theme?</h4>
+        <p> Q: Which neighborhood/district has the maximum number of missing person incidents?</p>
+        <p> Ans: to the above question is Southern police district. And the neighborhoods mapped to the police district can be figured out from <a
+            href="http://www.publicsafetystrategies.com/wp-content/uploads/2015/03/SFPD-District-Station-Boundary-Analysis-Report-March-2015.pdf" target="_blank">Police District neighborhood Mapping</a> </p>
+        <p> Q: Is there a visible pattern between incidents accross neighborhood?</p>
+        <p> Ans: Yes, on an average more number of person goes missing around 12PM in afternoon and mostly on weekdays as compared to weekends and in addition to that on an average more number of person goes missing during a summer months i.e. april
+          to august.</p>
+
+        <h4>Inspiration</h4>
+        <ul>
+          <li><a href="http://bl.ocks.org/ganezasan/dfe585847d65d0742ca7d0d1913d50e1" target="_blank">Day / Hour Heatmap in v4</a></li>
+          <li><a href="https://bl.ocks.org/adamjanes/6cf85a4fd79e122695ebde7d41fe327f" target="_blank">Choropleth V5</a></li>
+        </ul>
+
       </div>
       <!-- End page content -->
     </div>

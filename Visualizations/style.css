@@ -27,16 +27,6 @@ path.neighborhood {
   stroke-width: 1.5px !important;
 }
 
-a:link,
-a:visited {
-  color: #444444;
-}
-
-a:hover,
-a:active {
-  color: red;
-}
-
 /* Legend Position Style */
 .legend {
   position: absolute;

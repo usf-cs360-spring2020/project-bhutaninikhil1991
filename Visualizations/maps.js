@@ -24,7 +24,7 @@ var formatTimeHour = d3.timeFormat("%H"),
 
 var svgSlider = d3.select("#slider")
   .append("svg")
-  .attr("width", width)
+  .attr("width", width + 10)
   .attr("height", height / 2);
 
 var x = d3.scaleTime()
