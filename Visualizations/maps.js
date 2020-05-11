@@ -121,8 +121,8 @@ Promise.all([
   console.log(err);
 })
 
-var lowColor = '#ffe5d8';
-var highColor = '#e0631f';
+var lowColor = '#fff6e5';
+var highColor = '#ffa500';
 
 var active = d3.select(null);
 
