@@ -55,22 +55,6 @@
           <li>Clicking on the police district simultaneoously in the choropleth map gives the further flexibility of filtering the data accordingly.</li>
         </ul>
 
-        <h4>Peer Review Feedback</h4>
-        <ul>
-          <li>Encoding the raw incident count on the choropleth map should be avoided. Context is not enough for prototype.</li>
-          <li>Choropleths always have a bit of a lie factor because of the area. The color scale is alright but there are big chunks of areas with the same color.</li>
-          <li>data density and data-ink ratio is also very good.</li>
-          <li>You Can connect two prototypes using same filter.</li>
-          <li>Appropriate gradient color scheme used for encoding number of incidents.</li>
-        </ul>
-
-        <h4> Changes I Made</h4>
-        <ul>
-          <li>Changed the basemap of the choropleth map from "SF neighborhood" to "Police district" because of missing data for many neighborhoods within the report.</li>
-          <li>Encoded the choropleth map as percentage of missing person incidents accross police district instead of represting it as raw count.</li>
-          <li>linked interactivities across prototypes as suggested in one of the comments.</li>
-        </ul>
-
         <h4> Data Encoding and Interpretation</h4>
         <h5>Choropleth Map</h5>
         <p>Choropleth Maps displays san francisco police districts that are coloured, shaded or patterned in relation to a precentage of incident count across police districts. This provides a way to visualise values over a geographical area, which
@@ -81,14 +65,14 @@
           represent higher missing person incident count.</p>
         <h5>Heatmap</h5>
         <p>A heat map uses a matrix layout with colour and shading to show the relationship between two categories of values. The values are presented along each axis and the corresponding cell is then colour-coded to represent the relationship
-          between the two categories. This heatmap shows the days i.e. Monday to Sunday (y axis) on a 24 hour clock i.e. 12AM(00 hrs.) to 11PM(23 hrs.) (x axis). The darker cells would indicate there are more number of missing person incidents
+          between the two categories. This heatmap shows the days i.e. Monday to Sunday (y axis) on a 24 hour clock i.e. 12AM(00 hrs.) PST to 11PM(23 hrs.) PST (x axis). The darker cells would indicate there are more number of missing person incidents
           .The general hierarchy of color shades varies from the darkest (highest values) through the mid range shades and to the light shades (lowest values).</p>
 
         <h4>Conclusion based on the prototype</h4>
         <ul>
           <li>In general as compared to year 2015, year 2019 has less number of missing person incidents reported over all.</li>
           <li>on an average more number of person goes missing around 12PM in afternoon and mostly on weekdays as compared to weekends.</li>
-          <li>on an average more number of person goes missing during a summer months i.e. april to august.</li>
+          <li>on an average more number of person goes missing during a summer months i.e. April to August.</li>
           <li>on an average southern police district records highest number of missing person incidents across 5 years span.</li>
         </ul>
         <h4>How this visualization supports the theme?</h4>
