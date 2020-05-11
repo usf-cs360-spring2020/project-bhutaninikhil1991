@@ -1,0 +1,110 @@
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  font: 12px sans-serif;
+  background-color: white;
+  border: 1px #b7b7b7 solid;
+  pointer-events: none;
+  width: auto;
+}
+
+path.land {
+  fill: #dddddd;
+  stroke: none;
+}
+
+path.neighborhood {
+  /* fill: rgb(248, 247, 247); */
+  fill: none;
+  stroke: white;
+  stroke-width: 3.5px;
+  pointer-events: none;
+}
+
+.active {
+  stroke: black !important;
+  stroke-width: 1.5px !important;
+}
+
+a:link,
+a:visited {
+  color: #444444;
+}
+
+a:hover,
+a:active {
+  color: red;
+}
+
+/* Legend Position Style */
+.legend {
+  position: absolute;
+  left: 1380px;
+  top: 450px;
+}
+
+.timeLabel,
+.dayLabel {
+  font-size: 1.6rem;
+  fill: #AAAAAA;
+  font-weight: 300;
+}
+
+rect.bordered {
+  stroke: #E6E6E6;
+  stroke-width: 2px;
+}
+
+text.mono {
+  font-size: 9pt;
+  font-family: Consolas, courier;
+  fill: #aaa;
+}
+
+.bar {
+  fill: steelblue;
+  opacity: 0.8;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.ticks {
+  font-size: 10px;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #dcdcdc;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}

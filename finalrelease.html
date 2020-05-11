@@ -1,0 +1,83 @@
+<head>
+  <!-- <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script> -->
+  <script type="text/javascript" src="Visualizations/maps.js"></script>
+  <script type="text/javascript" src="Visualizations/heatmap.js"></script>
+  <script type="text/javascript" src="Visualizations/chart.js"></script>
+  <!-- include d3-legend: https://d3-legend.susielu.com/ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js" integrity="sha256-qo76Vs9B6JAALbrTn+PcN1r09hbNLd2M78V19glOMeU=" crossorigin="anonymous"></script>
+  <link href="Visualizations/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <!-- Begin page content -->
+      <div class="content" style="overflow: scroll">
+
+        <h1 id="d3implementation">D3 Implementation</h1>
+        <h2>Analysis of Police Department Missing Person Incident Reports 2015 - 2019</h2>
+
+        <div style="width:50%;height:100%; float:left">
+          <div id="div_heatmap">
+            <h3 style="font-weight: normal">Day/Hour Missing Person Incident Report</h3>
+            <svg id="heatmap"></svg>
+          </div>
+          <div id="div_barchart">
+            <h3 style="font-weight: normal">Monthly Missing Person Incident Report</h3>
+            <svg id="barchart"></svg>
+          </div>
+        </div>
+
+        <div style="width:50%;height:100%; float:right">
+          <div id="slider"></div>
+          <h3 style="font-weight: normal">Police District wise distribution of Missing Person Incident Report</h3>
+          <div id="div_map">
+            <svg id="map">
+              <g id="basemap"></g>
+              <g id="outline" pointer-events="none"></g>
+              <g id="cases"></g>
+              <g id="tooltip" pointer-events="none"></g>
+              <g id="details" pointer-events="none"></g>
+            </svg>
+            <p style="text-align:center">Nikhil Bhutani<br>
+              Source: <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783/data" target="_blank">Police Department Incident Reports</a> (<a
+                href="https://data.sfgov.org/Public-Safety/Current-Police-Districts/wkhw-cjsf" target="_blank">Police District</a>)
+            </p>
+          </div>
+        </div>
+        <!-- <div class="split left">
+          <div class="centered">
+            <div id="div_heatmap">
+              <h3 style="font-weight: normal">Day/Hour Missing Person Incident Report</h3>
+              <svg id="heatmap"></svg>
+            </div>
+            <div id="div_barchart">
+              <h3 style="font-weight: normal">Monthly Missing Person Incident Report</h3>
+              <svg id="barchart"></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="split right">
+          <div class="centered">
+            <div id="slider"></div>
+            <h3 style="font-weight: normal">Police District wise distribution of Missing Person Incident Report</h3>
+            <div id="div_map">
+              <svg id="map">
+                <g id="basemap"></g>
+                <g id="outline" pointer-events="none"></g>
+                <g id="cases"></g>
+                <g id="tooltip" pointer-events="none"></g>
+                <g id="details" pointer-events="none"></g>
+              </svg>
+              <p>Nikhil Bhutani</p>
+              Source: <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783/data" target="_blank">Police Department Incident Reports</a> (<a
+                href="https://data.sfgov.org/Public-Safety/Current-Police-Districts/wkhw-cjsf" target="_blank">Police District</a>)
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- End page content -->
+    </div>
+  </section>
+</body>

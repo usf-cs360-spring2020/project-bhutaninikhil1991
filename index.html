@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
   <link href="style.css" rel="stylesheet" type="text/css">
   <!-- TODO: Change title -->
   <title>Final Project</title>
@@ -60,6 +61,10 @@
 
       $("#betarelease").click(function() {
         $("#body").load("betarelease.html");
+      });
+
+      $("#finalrelease").click(function() {
+        $("#body").load("finalrelease.html");
       });
 
       $('.navbar-item').click(function() {
@@ -141,6 +146,10 @@
                 <a class="navbar-item" href="#" id="betarelease">
                   <span class="icon"><i class="fas fa-chart-area"></i></span>
                   <span>Beta Releases</span>
+                </a>
+                <a class="navbar-item" href="#" id="finalrelease">
+                  <span class="icon"><i class="fas fa-chart-area"></i></span>
+                  <span>Final Releases</span>
                 </a>
 
                 <!-- <hr class="navbar-divider">
