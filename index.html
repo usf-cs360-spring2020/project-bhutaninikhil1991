@@ -43,10 +43,6 @@
       $("#body").load("home.html");
       $("#home").addClass("is-active");
 
-      $("#data").click(function() {
-        $("#body").load("data.html");
-      });
-
       $("#home").click(function() {
         $("#body").load("home.html");
       });
@@ -67,6 +63,14 @@
         $("#body").load("finalrelease.html");
       });
 
+      $("#data, #dataset1").click(function() {
+        $("#body").load("dataset1.html");
+      });
+
+      $("#dataset2").click(function() {
+        $("#body").load("dataset2.html");
+      });
+
       $('.navbar-item').click(function() {
         // remove classes from all
         $('.navbar-item').removeClass("is-active");
@@ -74,9 +78,16 @@
         $(this).addClass("is-active");
       });
 
-      $('.dropdown').click(function(event) {
+      $('.visualizationdropdown').click(function(event) {
+        $('.navbar-item').removeClass("is-active");
         event.stopPropagation();
-        $(".dropdown-menu").slideToggle("fast");
+        $(".visualization_dropdown-menu").slideToggle("fast");
+      });
+
+      $('.datadropdown').click(function(event) {
+        $('.navbar-item').removeClass("is-active");
+        event.stopPropagation();
+        $(".data_dropdown-menu").slideToggle("fast");
       });
 
     });
@@ -123,22 +134,32 @@
         <div id="main-menu" class="navbar-menu has-text-weight-medium">
           <!-- Left navbar items -->
           <div class="navbar-start">
-            <a class="navbar-item" href="#" title="Data" id="data">
-              <span class="icon"><i class="fas fa-table"></i></span>
-              <span>Data</span>
-            </a>
 
-            <!-- <a class="navbar-item" href="#" title="Visualization" id="visualization">
-              <span>Visualization</span>
-            </a> -->
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link datadropdown dropdown" href="#" title="Data" id="data">
+                <span class="icon"><i class="fas fa-table"></i></span>
+                <span>Data</span>
+              </a>
+
+              <div class="navbar-dropdown data_dropdown-menu dropdown-menu">
+                <a class="navbar-item" href="#" id="dataset1">
+                  <span class="icon"><i class="fas fa-table"></i></span>
+                  <span>Dataset 1</span>
+                </a>
+                <a class="navbar-item" href="#" id="dataset2">
+                  <span class="icon"><i class="fas fa-table"></i></span>
+                  <span>Dataset 2</span>
+                </a>
+              </div>
+            </div>
 
             <!-- TODO: Modify or remove dropdown -->
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link dropdown" href="#" id="visualization">
+              <a class="navbar-link visualizationdropdown dropdown" href="#" id="visualization">
                 Visualizations
               </a>
 
-              <div class="navbar-dropdown dropdown-menu">
+              <div class="navbar-dropdown visualization_dropdown-menu dropdown-menu">
                 <a class="navbar-item" href="#" id="alpharelease">
                   <span class="icon"><i class="fas fa-chart-line"></i></span>
                   <span>Alpha Release</span>
@@ -151,17 +172,6 @@
                   <span class="icon"><i class="fas fa-chart-area"></i></span>
                   <span>Final Releases</span>
                 </a>
-
-                <!-- <hr class="navbar-divider">
-
-                <a class="navbar-item" href="#" id="barchart">
-                  <span class="icon"><i class="fas fa-chart-bar"></i></span>
-                  <span>Bar Chart</span>
-                </a>
-                <a class="navbar-item" href="#" id="piechart">
-                  <span class="icon"><i class="fas fa-chart-pie"></i></span>
-                  <span>Pie Chart</span>
-                </a> -->
               </div>
             </div>
           </div>
