@@ -63,12 +63,12 @@
         $("#body").load("finalrelease.html");
       });
 
-      $("#data, #dataset1").click(function() {
-        $("#body").load("dataset1.html");
+      $("#data, #currentdataset").click(function() {
+        $("#body").load("currentdataset.html");
       });
 
-      $("#dataset2").click(function() {
-        $("#body").load("dataset2.html");
+      $("#historicaldataset").click(function() {
+        $("#body").load("historicaldataset.html");
       });
 
       $('.navbar-item').click(function() {
@@ -84,10 +84,10 @@
         $(".visualization_dropdown-menu").slideToggle("fast");
       });
 
-      $('.datadropdown').click(function(event) {
+      $('.datasetdropdown').click(function(event) {
         $('.navbar-item').removeClass("is-active");
         event.stopPropagation();
-        $(".data_dropdown-menu").slideToggle("fast");
+        $(".dataset_dropdown-menu").slideToggle("fast");
       });
 
     });
@@ -136,19 +136,19 @@
           <div class="navbar-start">
 
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link datadropdown dropdown" href="#" title="Data" id="data">
+              <a class="navbar-link datasetdropdown dropdown" href="#" title="Data" id="data">
                 <span class="icon"><i class="fas fa-table"></i></span>
                 <span>Data</span>
               </a>
 
-              <div class="navbar-dropdown data_dropdown-menu dropdown-menu">
-                <a class="navbar-item" href="#" id="dataset1">
+              <div class="navbar-dropdown dataset_dropdown-menu dropdown-menu">
+                <a class="navbar-item" href="#" id="currentdataset">
                   <span class="icon"><i class="fas fa-table"></i></span>
-                  <span>Dataset 1</span>
+                  <span>Current Dataset</span>
                 </a>
-                <a class="navbar-item" href="#" id="dataset2">
+                <a class="navbar-item" href="#" id="historicaldataset">
                   <span class="icon"><i class="fas fa-table"></i></span>
-                  <span>Dataset 2</span>
+                  <span>Historical Dataset</span>
                 </a>
               </div>
             </div>
