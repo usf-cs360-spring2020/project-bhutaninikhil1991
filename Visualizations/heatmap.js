@@ -123,6 +123,17 @@ var timeLabels = heatmapsvg.selectAll(".timeLabel")
   .style("text-anchor", "middle")
   .attr("transform", "translate(" + gridSize / 2 + ", -6)");
 
+// create a tooltip
+var tooltip = d3.select("#div_heatmap")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "2px")
+  .style("border-radius", "5px")
+  .style("padding", "5px")
+
 function updateHeatMap(location, data, year) {
   if (location === "all")
     data = formatDataHeatMapForALL(data);
@@ -152,17 +163,6 @@ function updateHeatMap(location, data, year) {
 
   //remove existing data
   heatmapsvg.selectAll(".hour").remove();
-
-  // create a tooltip
-  var tooltip = d3.select("#div_heatmap")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {

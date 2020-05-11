@@ -56,6 +56,17 @@ var barchart =
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+// create a tooltip
+var tooltip = d3.select("#div_barchart")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "2px")
+  .style("border-radius", "5px")
+  .style("padding", "5px");
+
 function updateBarChart(location, data, year) {
 
   data = formatChartData(data);
@@ -137,17 +148,6 @@ function updateBarChart(location, data, year) {
 
   //make bars
   var bars = barchart.selectAll(".bar").data(data);
-
-  // create a tooltip
-  var tooltip = d3.select("#div_barchart")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
